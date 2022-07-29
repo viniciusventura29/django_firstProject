@@ -1,0 +1,37 @@
+{% load static %}
+
+{% include 'header.html' %}
+
+<body>
+    <!-- NAV BAR -->
+    {% include 'nav.html' %}
+
+    <!-- SIDE BAR -->
+    {% include 'sidebar.html' %}
+
+    <!-- ROWs DIVISION -->
+    <div class="row">
+        <!-- LISTS DIVISION -->
+        <ul class="collection">
+            {% for user in users %}
+            <li class="collection-item avatar">
+                <a href="{% url 'details' user.id %}">
+                    <img src="" alt="">
+                </a>
+                <span class="title"> {{user.name}} </span>
+                <p>
+                    
+                    {{user.phone}} <br>
+                    {{user.email}}
+                </p>
+            </li>
+            {% endfor %}
+            <a class="btn" href="{%url 'save_user'%}">formulario</a>
+        </ul>
+    </div>
+
+    <script src="{% static 'js/initSideBar.js' %}"></script>
+
+</body>
+
+</html>

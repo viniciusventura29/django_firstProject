@@ -1,0 +1,25 @@
+{% load static %}
+
+{% include 'header.html' %}
+
+<body>
+    <!-- NAV BAR -->
+    {% include 'nav.html' %}
+
+    <h1>Cadastro de usuários</h1>
+
+    <form action="{% url 'save_user' %}" method="post"> 
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Digite seu nome: ">
+        <input type="number" name="phone" placeholder="Digite o numero do seu telefone: ">
+        <input type="email" name="email" placeholder="Digite seu e-mail: ">
+        <input type="text" name="active" placeholder="1 ou 0">
+        <input type="number" name="price" placeholder="Preço">
+        <input type="file" name="photo" id="">
+
+        <button class="btn" type="submit">Salvar</button>
+    </form>
+
+</body>
+
+</html>

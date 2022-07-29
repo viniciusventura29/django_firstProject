@@ -1,0 +1,36 @@
+{% load static %}
+
+{% include 'header.html' %}
+
+<body>
+    <!-- NAV BAR -->
+    {% include 'nav.html' %}
+
+    <!-- ROWs DIVISION -->
+    <div class="row">
+
+        <!-- MENU DIVISION -->
+        <div class="col s3">
+            <div class="container">
+                OPTIONS MENU
+            </div>
+        </div>
+
+        <!-- LISTS DIVISION -->
+        <div class="col s9">
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">portrait</i>
+                    <span class="title"> {{userData.name}} </span>
+                    <p>
+                        {{userData.phone}} <br>
+                        {{userData.email}}
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
